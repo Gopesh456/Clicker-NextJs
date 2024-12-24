@@ -41,6 +41,18 @@ export function onSubmit() {
     hundredThousands = 0;
     millions += 1;
   }
+  if (number == 10000000) {
+    alert("You have reached the maximum number of clicks!");
+    number = 0;
+    ones =
+      tens =
+      hundreds =
+      thousands =
+      tenThousands =
+      hundredThousands =
+      millions =
+        0;
+  }
 
   onesDiv.children[ones].scrollIntoView({
     behavior: "smooth",
@@ -71,3 +83,21 @@ export function onSubmit() {
     block: "center",
   });
 }
+
+window.addEventListener("load", (event) => {
+  const snowDiv = document.querySelector("#snow-box");
+  const snow = document.querySelector("#snow");
+  snow.style.visibility = "hidden";
+  function genSnow() {
+    for (let i = 0; i < 10; i++) {
+      let clone = snow.cloneNode(true);
+      clone.style.visibility = "visible";
+      clone.classList.add("snowflake" + i);
+      clone.style.left = Math.floor(Math.random() * 100) + "vw";
+      clone.style.animationDuration = Math.random() * 3 + 2 + "s";
+      snowDiv.appendChild(clone);
+    }
+  }
+
+  genSnow();
+});
