@@ -58,38 +58,53 @@ export function onSubmit() {
     behavior: "smooth",
     block: "center",
   });
+  onesDiv.children[ones].style = "display:flex; justify-content:center";
+
   tensDiv.children[tens].scrollIntoView({
     behavior: "smooth",
     block: "center",
   });
+  tensDiv.children[tens].style = "display:flex; justify-content:center";
   hundredsDiv.children[hundreds].scrollIntoView({
     behavior: "smooth",
     block: "center",
   });
+  hundredsDiv.children[hundreds].style = "display:flex; justify-content:center";
   thousandsDiv.children[thousands].scrollIntoView({
     behavior: "smooth",
     block: "center",
   });
+  thousandsDiv.children[thousands].style =
+    "display:flex; justify-content:center";
   tenThousandsDiv.children[tenThousands].scrollIntoView({
     behavior: "smooth",
     block: "center",
   });
+  tenThousandsDiv.children[tenThousands].style =
+    "display:flex; justify-content:center";
   hundredThousandsDiv.children[hundredThousands].scrollIntoView({
     behavior: "smooth",
     block: "center",
   });
+  hundredThousandsDiv.children[hundredThousands].style =
+    "display:flex; justify-content:center";
   milDiv.children[millions].scrollIntoView({
     behavior: "smooth",
     block: "center",
   });
+  milDiv.children[millions].style = "display:flex; justify-content:center";
 }
 
-window.addEventListener("load", (event) => {
+export function snowFall() {
+  let numberOfSnowflakes = 10;
+  if (window.innerWidth < 500) {
+    numberOfSnowflakes = 7;
+  }
   const snowDiv = document.querySelector("#snow-box");
   const snow = document.querySelector("#snow");
   snow.style.visibility = "hidden";
   function genSnow() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < numberOfSnowflakes; i++) {
       let clone = snow.cloneNode(true);
       clone.style.visibility = "visible";
       clone.classList.add("snowflake" + i);
@@ -98,6 +113,5 @@ window.addEventListener("load", (event) => {
       snowDiv.appendChild(clone);
     }
   }
-
   genSnow();
-});
+}
