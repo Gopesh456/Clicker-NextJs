@@ -96,9 +96,9 @@ export function onSubmit() {
 }
 
 export function snowFall() {
-  let numberOfSnowflakes = 10;
+  let numberOfSnowflakes = 8;
   if (window.innerWidth < 500) {
-    numberOfSnowflakes = 7;
+    numberOfSnowflakes = 6;
   }
   const snowDiv = document.querySelector("#snow-box");
   const snow = document.querySelector("#snow");
