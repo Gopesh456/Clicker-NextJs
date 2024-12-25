@@ -2,6 +2,9 @@
 
 This project is a simple clicker game built with Next.js. The game increments counters and displays them in different digit boxes. Additionally, it includes a snowfall effect for visual enhancement.
 
+![Clicker image](https://github.com/user-attachments/assets/3e05b355-0cf5-4d77-9272-5315d0184ab5)
+
+
 ## Features
 
 - Increment counters with each click.
